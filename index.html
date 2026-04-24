@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stand Taller</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #111;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 26px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.25s;
+            width: 230px;
+        }
+
+        .buy {
+            background: #111;
+            color: white;
+        }
+
+        .buy:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .free {
+            background: transparent;
+            border: 1px solid #ccc;
+            color: #111;
+        }
+
+        .free:hover {
+            background: #f5f5f5;
+            transform: translateY(-2px);
+        }
+
+        .section {
+            margin-top: 70px;
+        }
+
+        .section h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            max-width: 700px;
+            margin: auto;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .guarantee {
+            margin-top: 60px;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="hidden">Stand Taller</h1>
+        <p class="subtitle hidden">A Professional Posture Correction Guide to Help You Look Taller Naturally</p>
+
+        <img src="https://i.ibb.co/gLRwMfGQ/stand-taller.png" alt="Ebook Cover" class="hidden">
+
+        <div class="buttons hidden">
+            <a href="https://zacexdd.gumroad.com/l/yukqrp" target="_blank" class="btn buy">Buy Now $9.99</a>
+            <a href="https://gamelnk.site/cl/i/vejdw2" target="_blank" class="btn free">Get Free (Sponsored)</a>
+        </div>
+
+        <div class="section hidden">
+            <h2>What This Ebook Is About</h2>
+            <p class="text">
+                This is a posture correction ebook designed to help you fix spinal alignment, improve body posture, and
+                unlock your natural height appearance.
+            </p>
+        </div>
+
+        <div class="section hidden">
+            <h2>What You'll Learn</h2>
+            <div class="features">
+                <div class="card">Fix Rib Flare & Expand Your Posture</div>
+                <div class="card">Correct Anterior Pelvic Tilt (APT)</div>
+                <div class="card">Decompress Your Spine Naturally</div>
+                <div class="card">Step-by-Step Posture Reset System</div>
+            </div>
+        </div>
+
+        <div class="section hidden">
+            <h2>Who This Is For</h2>
+            <p class="text">
+                Works at any age improve posture, confidence, and appearance.
+            </p>
+        </div>
+
+        <div class="guarantee hidden">
+            <strong>30-Day Guarantee</strong>
+            <p class="text">
+                Follow this system for 30 days. If you don’t see improvement in how tall you look (up to 2cm from
+                posture), you can request a full refund.
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+
+        document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
